@@ -1,0 +1,100 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body {
+   display: grid;
+   place-items: center;
+   min-height: 100vh;
+   background: linear-gradient(315deg, #4d4343 0%, #96a8bb 74%);
+}
+.wrapper {
+   display: flex;
+}
+.icon {
+   margin: 0 20px;
+   text-align: center;
+   cursor: pointer;
+   position: relative;
+   z-index: 2;
+   transition: transform 0.2s ease-in-out;
+}
+.icon span {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 60px;
+   height: 60px;
+   background: #fff;
+   border-radius: 50%;
+   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+   transition: background-color 0.2s ease-in-out;
+}
+.icon i {
+   font-size: 25px;
+   color: #333;
+}
+.tooltip {
+   position: absolute;
+   top: -60px;
+   left: 50%;
+   transform: translateX(-50%);
+   background: #333;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 500;
+   padding: 8px 16px;
+   border-radius: 25px;
+   opacity: 0;
+   pointer-events: none;
+   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+   transition: opacity 0.4s ease-in-out;
+}
+.wrapper .icon:hover .tooltip{
+  top: -60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span{
+  color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before{
+  background: #3B5999;
+  border: 2px solid #3B5492 ;
+  box-shadow: 0px 5px 5px #3B5999;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before{
+  background: #46C1F6;
+ 
+  border: 1px solid #29b0ea;
+  box-shadow: 0px 3px 2px #46C1F6;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before{
+  background: #e1306c;
+  border: 1px solid #e13064;
+  box-shadow: 0px 3px 2px #e1306d;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before{
+  background: rgba(170, 144, 170, 0.2);
+}
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip:before{
+  background: #DE463B;
+}
